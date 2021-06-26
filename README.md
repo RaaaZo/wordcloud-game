@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Requirements
+## Requirements
 
 Before you start, make sure you have installed [Node](https://nodejs.org/en/).
 Then you have to install all packages with command `npm install or yarn`.

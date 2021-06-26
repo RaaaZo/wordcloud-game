@@ -18,7 +18,11 @@ export const Wrapper = styled.div<{
   align-items: center;
   width: 100%;
   height: 100%;
-  grid-column: auto;
+  grid-column: 1/3;
+
+  @media (min-width: 400px) {
+    grid-column: auto;
+  }
 
   @media (min-width: 768px) {
     grid-column: ${({ randomGridColumn }) => randomGridColumn};
