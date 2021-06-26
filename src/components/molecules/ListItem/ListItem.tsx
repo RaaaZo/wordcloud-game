@@ -1,3 +1,4 @@
+import { randomNumber } from 'helpers/randomNumber';
 import { useEffect, useState } from 'react';
 import { ListItem, ListItemButton, Wrapper } from './ListItem.styles';
 
@@ -22,8 +23,8 @@ const ListItemComponent: React.FC<Props> = ({
   const [gridRow, setGridRow] = useState<number>(0);
 
   useEffect(() => {
-    setGridColumn(Math.round(Math.random() * 12));
-    setGridRow(Math.round(Math.random() * 12));
+    setGridColumn(randomNumber(12));
+    setGridRow(randomNumber(12));
   }, []);
 
   return (
