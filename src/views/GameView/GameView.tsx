@@ -1,15 +1,14 @@
 import { CenteringWrapper } from 'components/atoms/CenteringWrapper/CenteringWrapper';
 import { Header } from 'components/atoms/Header/Header';
+import GameViewButtons from 'components/molecules/GameViewButtons/GameViewButtons';
 import ListItem from 'components/molecules/ListItem/ListItem';
 import { useFetchQuestions } from 'hooks/useFetchQuestions';
 import { ScoreContext } from 'providers/ScoreProvider';
 import { useContext, useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
 
-import { GameWrapper, List, StyledButton } from './GameView.styles';
+import { GameWrapper, List } from './GameView.styles';
 
 const GameView = () => {
-  const { push } = useHistory();
   const { handleScore } = useContext(ScoreContext);
   const { data, error, fetchData, isLoading } = useFetchQuestions();
 
@@ -91,15 +90,11 @@ const GameView = () => {
               ))}
             </List>
           </GameWrapper>
-          {answersChecked ? (
-            <StyledButton onClick={() => push('/score')}>
-              Finish Game
-            </StyledButton>
-          ) : (
-            <StyledButton onClick={checkAnswersHandler}>
-              Check answers
-            </StyledButton>
-          )}
+
+          <GameViewButtons
+            answersChecked={answersChecked}
+            checkAnswersHandler={checkAnswersHandler}
+          />
         </>
       ) : null}
     </CenteringWrapper>

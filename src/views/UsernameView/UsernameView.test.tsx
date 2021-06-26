@@ -1,8 +1,10 @@
-import userEvent from '@testing-library/user-event';
-import { render, screen } from 'test-utils';
-import UsernameView from './UsernameView';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
+import { render, screen } from 'test-utils';
+
+import userEvent from '@testing-library/user-event';
+
+import UsernameView from './UsernameView';
 
 describe('UsernameView', () => {
   test('should renders the component without errors', () => {

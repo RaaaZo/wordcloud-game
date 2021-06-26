@@ -18,8 +18,12 @@ export const Wrapper = styled.div<{
   align-items: center;
   width: 100%;
   height: 100%;
-  grid-column: ${({ randomGridColumn }) => randomGridColumn};
-  grid-row: ${({ randomGridRow }) => randomGridRow};
+  grid-column: auto;
+
+  @media (min-width: 768px) {
+    grid-column: ${({ randomGridColumn }) => randomGridColumn};
+    grid-row: ${({ randomGridRow }) => randomGridRow};
+  }
 
   & button:disabled {
     color: ${({ theme, isGoodAnswer, isWrongAnswer }) => {

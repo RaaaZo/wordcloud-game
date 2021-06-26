@@ -1,6 +1,8 @@
 import { render, screen } from 'test-utils';
-import Input from './Input';
+
 import userEvent from '@testing-library/user-event';
+
+import Input from './Input';
 
 describe('Input', () => {
   test('should renders the component without errors', () => {

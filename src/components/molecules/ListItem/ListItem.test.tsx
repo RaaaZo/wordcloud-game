@@ -1,5 +1,7 @@
-import userEvent from '@testing-library/user-event';
 import { render, screen } from 'test-utils';
+
+import userEvent from '@testing-library/user-event';
+
 import ListItem from './ListItem';
 
 describe('ListItem', () => {

@@ -1,6 +1,7 @@
-import { render, RenderOptions } from '@testing-library/react';
 import AllProviders from 'providers/AllProviders';
 import { ReactElement } from 'react';
+
+import { render, RenderOptions } from '@testing-library/react';
 
 const AllTheProviders: React.FC = ({ children }) => {
   return <AllProviders>{children}</AllProviders>;

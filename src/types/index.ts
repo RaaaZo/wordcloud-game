@@ -13,3 +13,10 @@ export interface ScoreContextInterface {
   score: number;
   handleScore: (wrongAnswers: number, goodAnswers: number) => void;
 }
+
+export interface UseFetchInterface {
+  data: QuestionInterface | null;
+  isLoading: boolean;
+  error: string | null;
+  fetchData: (url: string) => Promise<void>;
+}

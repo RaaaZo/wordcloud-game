@@ -1,4 +1,5 @@
 import { render, screen } from 'test-utils';
+
 import ScoreView from './ScoreView';
 
 describe('ScoreView', () => {

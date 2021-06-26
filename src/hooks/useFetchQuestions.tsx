@@ -1,13 +1,6 @@
 import axios from 'axios';
 import React, { useCallback, useContext, useState } from 'react';
-import { QuestionInterface } from 'types';
-
-export interface UseFetchInterface {
-  data: QuestionInterface | null;
-  isLoading: boolean;
-  error: string | null;
-  fetchData: (url: string) => Promise<void>;
-}
+import { QuestionInterface, UseFetchInterface } from 'types';
 
 export const QuestionsContext = React.createContext<UseFetchInterface>({
   data: null,
